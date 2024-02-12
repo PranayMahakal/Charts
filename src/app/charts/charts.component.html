@@ -1,0 +1,23 @@
+<p>charts works!</p>
+<div class="card-container">
+<div style="text-align:center" *ngFor="let chart of chartOptionsArray" class="card">
+  <div *ngIf=" chart==donut">
+    <apx-chart
+    [series]="chart.series.data"
+    [chart]="chart.chart"
+
+    [title]="chart.title"
+    
+
+  ></apx-chart>
+  </div>
+    <apx-chart
+      [series]="chart.series"
+      [chart]="chart.chart"
+      [xaxis]="chart.xaxis"
+      [title]="chart.title"
+      [stroke]="chart.stroke"
+  
+    ></apx-chart>
+  </div>
+</div>
